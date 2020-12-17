@@ -94,11 +94,14 @@ public class Shipping {
 	System.out.println("TRUCK-No.    DATES OF DELIVERIES\n ");
 		
 		for(int i=0;i<IntRandomizer.arr.size()-1;i++) {
+			
 			if(i%2==0) {
+				
 				randMonth=(int) (Math.random()*12+1);
 				randDay=(int) (Math.random()*30+1)+1;
 				shipmt.setDay(randDay);
 				shipmt.setMonth(randMonth);
+				
 			}
 			
 		System.out.println("Truck-"+IntRandomizer.arr.get(i)+" ---> "+shipmt.getDay()+" / "
@@ -109,6 +112,7 @@ public class Shipping {
 	
 	public static String servicesMap() {
 		System.out.println("The following cities are areas where we provide our services: \n");
+		
 		System.out.println("CENTER		PHONE\n");
 		System.out.println("CLEVELAND   9090XXXXX\n");
 		System.out.println("LOVELAND    9090XXXXX\n");
@@ -123,9 +127,10 @@ public class Shipping {
 	}
 	
 	public static void menu() {
+		
 		System.out.println(" 1. SHOW ALL TRUCK LOADS NUMBER \n "
 				+ "2. DELIVERY \n "
-				+ "3. RATE ESTIMATE \n "
+				+ "3. ESTIMATE PRICE \n "
 				+ "4. SHIPPING LABEL \n "
 				+ "5. SEARCH FOR TRUCK LOAD NUMBER \n "+"6. SERVICE CENTERS\n "
 				+ "7. Exit\n\n Press Enter after every entry.\n");
@@ -137,6 +142,8 @@ public class Shipping {
 	public static void main(String[] args) {
 		menu();
 		
+				
+		
 		int choix; 
 		
 		
@@ -146,6 +153,7 @@ public class Shipping {
 			choix=sc.nextInt();
 			
 			switch(choix) {
+			
 			case 1:truckNumber(true);
 			
 				break;
@@ -159,7 +167,7 @@ public class Shipping {
 				
 				break;
 			case 4:
-				
+				ShippingLabel.labelGenerator();
 				break;
 			case 5:truckNumber(false);
 			
