@@ -140,6 +140,10 @@ public class Shipping {
 	
 
 	public static void main(String[] args) {
+		
+		double length,width,height,weight;
+		
+		
 		menu();
 		
 				
@@ -154,7 +158,8 @@ public class Shipping {
 			
 			switch(choix) {
 			
-			case 1:truckNumber(true);
+			case 1:System.out.println("-----TRUCKS-----\n ");
+				truckNumber(true);
 			
 				break;
 			case 2:{
@@ -163,9 +168,22 @@ public class Shipping {
 				
 				
 				break;}
-			case 3:
+			case 3:{
+			System.out.println("Enter all the dimension required.\n");
+			System.out.println("Enter weight: ");
+			weight=sc.nextDouble();
+			System.out.println("Enter Height: ");
+			height=sc.nextDouble();
+			System.out.println("Enter Width: ");
+			width=sc.nextDouble();
+			System.out.println("Enter Length: ");
+			length=sc.nextDouble();
+			
+			ChargesMade charg=new ChargesMade( 0, length, width, height, 0);
+			charg.dimensions(length,width, height, weight);
+			
 				
-				break;
+				break;}
 			case 4:
 				ShippingLabel.labelGenerator();
 				break;

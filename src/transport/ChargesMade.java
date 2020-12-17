@@ -19,6 +19,7 @@ public class ChargesMade {
 		this.height = height;
 		this.charges = charges;
 	}
+	
 	public double getPrice() {
 		return price;
 	}
@@ -51,14 +52,19 @@ public class ChargesMade {
 		this.charges = charges;
 	}
 	
-	public  void dimensions(double length, double width, double height, double weight, double price) {
+	//PriceEstimate pri=new PriceEstimate(price, length, width, height, charges);
+	
+	public  void dimensions(double length, double width, double height, double weight) {
+		
 		
 		setLength(length);
 		setWidth(width);
 		setHeight(height);
 		setCharges(4);
-		setPrice(getCharges());
 		
+		setPrice(getCharges());
+		PriceEstimate pri=new PriceEstimate(getPrice(), getLength(), getWidth(), getHeight(), getCharges());
+		pri.setEstimate(getCharges());
 		
 		double maxVol=216;
 		double maxWgt=440;
@@ -75,7 +81,7 @@ public class ChargesMade {
 			}
 		
 		if((maxWgt<=439)||(maxWgt>=299)) {
-			double chg=getCharges()*400;
+			double chg=pri.getEstimate()*400;
 			System.out.println("The factor is $"+getPrice()+" & the charge is per load: $"+chg);
 			
 		}

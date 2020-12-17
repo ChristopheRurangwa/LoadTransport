@@ -1,6 +1,7 @@
 package transport;
 
 public class PriceEstimate extends ChargesMade {
+	
 
 	public PriceEstimate(double price, double length, double width, double height, double charges) {
 		super(price, length, width, height, charges);
@@ -8,8 +9,10 @@ public class PriceEstimate extends ChargesMade {
 		
 		
 	}
-
 	private double estimate;
+	
+
+	
 
 	public double getEstimate() {
 		return estimate;
@@ -18,5 +21,7 @@ public class PriceEstimate extends ChargesMade {
 	public void setEstimate(double estimate) {
 		this.estimate = estimate;
 	}
+	
+	
 	
 }
