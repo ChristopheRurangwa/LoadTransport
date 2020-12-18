@@ -35,22 +35,14 @@ public class IntRandomizer {
 				String data = scan.nextLine();
 				String conv=Integer.toString(input);
 					System.out.println("Truck-"+data);
-				
-				
-			}
-			}
-			
-			
+			}	}
 			}
 			catch(FileNotFoundException ex) {
 				System.out.println(ex);
 				ex.printStackTrace();
 				System.out.println("AN ERROR OCCURRED READING THE FILE!!!");
 			}
-		
-		
-		
-		
+
 			for(int i=0;i<=arr.size()-1;i++) {
 				if(input==arr.get(i)) {
 				System.out.println("The entry you entered "+input+" was found.");
@@ -63,9 +55,7 @@ public class IntRandomizer {
 		
 		return input;
 		}
-		
-	
-	
+
 	/**
 	 * Generates integer numbers, and writes them on file.dat
 	 */
@@ -92,13 +82,8 @@ public class IntRandomizer {
 				fwriter.write(intNumb+"\n");
 				
 				arr.add(intNumb);
-				//System.out.println(intNumb);
-				
 				
 			}
-			
-
-			
 			fwriter.close(); 
 			
 		}catch (IOException ex) 
@@ -110,7 +95,4 @@ public class IntRandomizer {
 		}
 		
 	}
-
-	
-
 }

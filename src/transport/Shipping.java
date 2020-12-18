@@ -68,8 +68,6 @@ public class Shipping {
 			IntRandomizer.readFile(input,bool);
 		
 		}		
-		
-		
 		return 0;
 		
 	}
@@ -100,10 +98,8 @@ public class Shipping {
 				randMonth=(int) (Math.random()*12+1);
 				randDay=(int) (Math.random()*30+1)+1;
 				shipmt.setDay(randDay);
-				shipmt.setMonth(randMonth);
-				
+				shipmt.setMonth(randMonth);	
 			}
-			
 		System.out.println("Truck-"+IntRandomizer.arr.get(i)+" ---> "+shipmt.getDay()+" / "
 			+shipmt.getMonth()+" / "+shipmt.getYear());
 		}
@@ -142,17 +138,9 @@ public class Shipping {
 	public static void main(String[] args) {
 		
 		double length,width,height,weight;
-		
-		
 		menu();
-		
-				
-		
 		int choix; 
-		
-		
-		
-		
+
 		do {
 			choix=sc.nextInt();
 			
@@ -178,26 +166,22 @@ public class Shipping {
 			width=sc.nextDouble();
 			System.out.println("Enter Length: ");
 			length=sc.nextDouble();
-			
 			ChargesMade charg=new ChargesMade( 0, length, width, height, 0);
 			charg.dimensions(length,width, height, weight);
+			break;}
 			
-				
-				break;}
 			case 4:
 				ShippingLabel.labelGenerator();
 				break;
-			case 5:truckNumber(false);
 			
+			case 5:truckNumber(false);
 				break;
+			
 			case 6:servicesMap();
 				
 				break;
+			
 			case 7:System.exit(0);
-				
-			
-				
-			
 			default:
 				System.out.println("You entered an invalid option, please select from the menu below.\n");
 				menu();
